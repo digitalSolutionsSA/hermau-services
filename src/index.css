@@ -10,28 +10,30 @@
   --color-brand-navy-pale: #f0f3f6;
 }
 
-* {
-  box-sizing: border-box;
-}
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
 
-html {
-  scroll-behavior: smooth;
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  color: #4a5568;
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-}
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: #4a5568;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
 
-#root {
-  width: 100%;
-  text-align: left;
-}
+  #root {
+    width: 100%;
+    text-align: left;
+  }
 
-h1, h2, h3, h4 {
-  color: #2d4055;
-  line-height: 1.2;
+  h1, h2, h3, h4 {
+    color: #2d4055;
+    line-height: 1.2;
+  }
 }
