@@ -55,11 +55,11 @@ export default function HeroSlider() {
       />
 
       {/* 20-year badge */}
-      <div className="absolute top-8 right-8 z-20 hidden md:block">
+      <div className="absolute top-4 right-4 md:top-8 md:right-8 z-20">
         <img
           src={logo20}
           alt="20 Years of Quality Service"
-          className="h-36 lg:h-44 w-auto drop-shadow-2xl"
+          className="h-20 sm:h-28 md:h-36 lg:h-44 w-auto drop-shadow-2xl"
           style={{ filter: 'drop-shadow(0 4px 24px rgba(0,0,0,0.35))' }}
         />
       </div>
