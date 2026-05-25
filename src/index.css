@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
 
 @import "tailwindcss";
 
@@ -6,26 +6,32 @@
   --color-brand-dark: #2d4055;
   --color-brand-green: #5da028;
   --color-brand-green-light: #7dc240;
-  --color-brand-green-pale: #f0f7e8;
-  --color-brand-navy-pale: #e8ecf0;
+  --color-brand-green-pale: #f2f8ea;
+  --color-brand-navy-pale: #f0f3f6;
 }
 
 * {
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #4a5568;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 #root {
   width: 100%;
   text-align: left;
+}
+
+h1, h2, h3, h4 {
+  color: #2d4055;
+  line-height: 1.2;
 }
