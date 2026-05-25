@@ -53,11 +53,11 @@ export default function GardenMaintenance() {
       {/* Services */}
       <section className="py-14 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">Our Garden Services</h2>
+          <h2 className="text-2xl font-bold mb-8 text-center" style={{ color: '#2d4055' }}>Our Garden Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {services.map(({ title, body }) => (
-              <div key={title} className="p-6 bg-green-50 rounded-lg border border-green-100">
-                <h3 className="text-lg font-semibold text-green-800 mb-3">{title}</h3>
+              <div key={title} className="p-6 rounded-lg border" style={{ backgroundColor: '#f0f7e8', borderColor: '#c8e6a0' }}>
+                <h3 className="text-lg font-semibold mb-3" style={{ color: '#2d4055' }}>{title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{body}</p>
               </div>
             ))}
@@ -78,22 +78,22 @@ export default function GardenMaintenance() {
       </section>
 
       {/* Verticutting */}
-      <section className="py-14 px-4 bg-gray-50">
+      <section className="py-14 px-4 bg-brand-navy-pale">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row gap-10 items-start mb-10">
             <div className="flex-1">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Verticutting</h2>
-              <h3 className="text-base font-semibold text-green-700 mb-2">Let your lawn breathe.</h3>
+              <h2 className="text-2xl font-bold mb-4" style={{ color: '#2d4055' }}>Verticutting</h2>
+              <h3 className="text-base font-semibold mb-2" style={{ color: '#5da028' }}>Let your lawn breathe.</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
                 The verticutter is a machine used for vertical mowing. The machine has vertical blades that remove
                 the thatch build-up of the grass. By removing the thatch it allows the turf to breathe easier and
                 to better absorb important nutrients.
               </p>
-              <h4 className="font-semibold text-gray-700 mb-3">Advantages of Verticutting:</h4>
+              <h4 className="font-semibold mb-3" style={{ color: '#2d4055' }}>Advantages of Verticutting:</h4>
               <ul className="space-y-2">
                 {verticuttingBenefits.map((benefit) => (
                   <li key={benefit} className="flex items-center gap-2 text-gray-600 text-sm">
-                    <span className="text-green-600 font-bold">✓</span> {benefit}
+                    <span style={{ color: '#5da028' }} className="font-bold">✓</span> {benefit}
                   </li>
                 ))}
               </ul>
@@ -113,12 +113,13 @@ export default function GardenMaintenance() {
       </section>
 
       {/* CTA */}
-      <section className="py-12 px-4 bg-green-700 text-white text-center">
+      <section className="py-12 px-4 text-white text-center" style={{ backgroundColor: '#2d4055' }}>
         <h2 className="text-2xl font-bold mb-3">Ready to transform your garden?</h2>
-        <p className="text-white/90 mb-6">Contact us today for a free assessment and tailored quote.</p>
+        <p className="text-white/80 mb-6">Contact us today for a free assessment and tailored quote.</p>
         <Link
           to="/contact"
-          className="bg-white text-green-700 font-semibold px-8 py-3 rounded hover:bg-green-50 transition-colors inline-block"
+          className="bg-white font-semibold px-8 py-3 rounded hover:bg-gray-100 transition-colors inline-block"
+          style={{ color: '#5da028' }}
         >
           Contact Us
         </Link>

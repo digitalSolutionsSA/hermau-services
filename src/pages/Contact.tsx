@@ -40,29 +40,29 @@ export default function Contact() {
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Contact Details */}
           <div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">Head Office</h2>
+            <h2 className="text-2xl font-bold mb-6" style={{ color: '#2d4055' }}>Head Office</h2>
             <div className="space-y-5">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 text-green-700">
+                <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#f0f7e8' }}>
                   📞
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-gray-700 mb-0.5">Phone</div>
-                  <a href="tel:+27832540740" className="text-gray-600 hover:text-green-700 transition-colors">
+                  <div className="text-sm font-semibold mb-0.5" style={{ color: '#2d4055' }}>Phone</div>
+                  <a href="tel:+27832540740" className="text-gray-600 hover:underline transition-colors" style={{ color: '#5da028' } as React.CSSProperties}>
                     +27 83 254 0740
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 text-green-700">
+                <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#f0f7e8' }}>
                   ✉️
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-gray-700 mb-0.5">Email</div>
+                  <div className="text-sm font-semibold mb-0.5" style={{ color: '#2d4055' }}>Email</div>
                   <a
                     href="mailto:gustav.aucamp@hermaugardens.co.za"
-                    className="text-gray-600 hover:text-green-700 transition-colors break-all"
+                    className="text-gray-600 hover:underline transition-colors break-all"
                   >
                     gustav.aucamp@hermaugardens.co.za
                   </a>
@@ -70,11 +70,11 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 text-green-700">
+                <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#f0f7e8' }}>
                   📍
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-gray-700 mb-0.5">Address</div>
+                  <div className="text-sm font-semibold mb-0.5" style={{ color: '#2d4055' }}>Address</div>
                   <p className="text-gray-600">
                     6 Montana Building<br />
                     25 Rabie Street<br />
@@ -100,10 +100,10 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">Send an Enquiry</h2>
+            <h2 className="text-2xl font-bold mb-6" style={{ color: '#2d4055' }}>Send an Enquiry</h2>
 
             {status === 'sent' ? (
-              <div className="bg-green-50 border border-green-200 text-green-800 rounded-lg p-6 text-center">
+              <div className="rounded-lg p-6 text-center border" style={{ backgroundColor: '#f0f7e8', borderColor: '#c8e6a0', color: '#2d4055' }}>
                 <div className="text-3xl mb-2">✅</div>
                 <h3 className="font-semibold mb-1">Thank you!</h3>
                 <p className="text-sm">We received your enquiry and will respond as soon as possible.</p>
@@ -111,7 +111,7 @@ export default function Contact() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="name">
+                  <label className="block text-sm font-medium mb-1" style={{ color: '#2d4055' }} htmlFor="name">
                     Full Name *
                   </label>
                   <input
@@ -119,13 +119,14 @@ export default function Contact() {
                     name="name"
                     type="text"
                     required
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2"
+                    style={{ '--tw-ring-color': '#5da028' } as React.CSSProperties}
                     placeholder="Your name"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="email">
+                  <label className="block text-sm font-medium mb-1" style={{ color: '#2d4055' }} htmlFor="email">
                     Email Address *
                   </label>
                   <input
@@ -133,32 +134,32 @@ export default function Contact() {
                     name="email"
                     type="email"
                     required
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2"
                     placeholder="your@email.com"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="phone">
+                  <label className="block text-sm font-medium mb-1" style={{ color: '#2d4055' }} htmlFor="phone">
                     Phone Number
                   </label>
                   <input
                     id="phone"
                     name="phone"
                     type="tel"
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2"
                     placeholder="+27 ..."
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="service">
+                  <label className="block text-sm font-medium mb-1" style={{ color: '#2d4055' }} htmlFor="service">
                     Service Interested In
                   </label>
                   <select
                     id="service"
                     name="service"
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2"
                   >
                     <option value="">Select a service...</option>
                     <option value="garden-maintenance">Garden Maintenance</option>
@@ -169,7 +170,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="message">
+                  <label className="block text-sm font-medium mb-1" style={{ color: '#2d4055' }} htmlFor="message">
                     Message *
                   </label>
                   <textarea
@@ -177,7 +178,7 @@ export default function Contact() {
                     name="message"
                     required
                     rows={4}
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2"
                     placeholder="Tell us about your requirements..."
                   />
                 </div>
@@ -189,7 +190,8 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={status === 'sending'}
-                  className="w-full bg-green-700 text-white font-semibold py-2.5 rounded hover:bg-green-600 transition-colors disabled:opacity-60 text-sm"
+                  className="w-full text-white font-semibold py-2.5 rounded hover:opacity-90 transition-opacity disabled:opacity-60 text-sm"
+                  style={{ backgroundColor: '#5da028' }}
                 >
                   {status === 'sending' ? 'Sending...' : 'Send Enquiry'}
                 </button>

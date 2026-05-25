@@ -36,7 +36,7 @@ export default function CleaningServices() {
       <section className="py-14 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Professional Cleaning Services</h2>
+            <h2 className="text-2xl font-bold mb-4" style={{ color: '#2d4055' }}>Professional Cleaning Services</h2>
             <p className="text-gray-600 leading-relaxed">
               At Hermau Services we offer commercial cleaning services across all sectors that will ensure that your
               commercial property and office provides an enjoyable working environment for guests and employees.
@@ -48,9 +48,9 @@ export default function CleaningServices() {
           {/* Why Choose Us */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             {whyUs.map(({ icon, title, desc }) => (
-              <div key={title} className="text-center p-5 bg-blue-50 rounded-lg border border-blue-100">
+              <div key={title} className="text-center p-5 rounded-lg border" style={{ backgroundColor: '#f0f7e8', borderColor: '#c8e6a0' }}>
                 <div className="text-4xl mb-3">{icon}</div>
-                <h3 className="font-semibold text-gray-800 mb-2 text-sm">{title}</h3>
+                <h3 className="font-semibold mb-2 text-sm" style={{ color: '#2d4055' }}>{title}</h3>
                 <p className="text-gray-600 text-xs leading-relaxed">{desc}</p>
               </div>
             ))}
@@ -71,11 +71,11 @@ export default function CleaningServices() {
       </section>
 
       {/* Cleaning Areas */}
-      <section className="py-14 px-4 bg-gray-50">
+      <section className="py-14 px-4 bg-brand-navy-pale">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row gap-10 items-start">
             <div className="flex-1">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">What We Clean</h2>
+              <h2 className="text-2xl font-bold mb-4" style={{ color: '#2d4055' }}>What We Clean</h2>
               <p className="text-gray-600 leading-relaxed mb-6">
                 With our commercial cleaning service we use our own cleaning equipment and provide required
                 chemicals for all your office and business cleaning. Our routine cleaning covers:
@@ -83,13 +83,13 @@ export default function CleaningServices() {
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {cleaningAreas.map((area) => (
                   <li key={area} className="flex items-center gap-2 text-gray-600 text-sm">
-                    <span className="text-blue-600 font-bold">✓</span> {area}
+                    <span style={{ color: '#5da028' }} className="font-bold">✓</span> {area}
                   </li>
                 ))}
               </ul>
             </div>
             <div className="w-full md:w-80 flex-shrink-0 bg-white rounded-xl p-6 shadow-md border border-gray-100">
-              <h3 className="text-lg font-semibold text-gray-800 mb-3">Tailored to You</h3>
+              <h3 className="text-lg font-semibold mb-3" style={{ color: '#2d4055' }}>Tailored to You</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
                 We realise that every business has different cleaning requirements and therefore we will tailor
                 our services to your needs and requirements to ensure minimal disruption to your daily operations.
@@ -103,12 +103,13 @@ export default function CleaningServices() {
       </section>
 
       {/* CTA */}
-      <section className="py-12 px-4 bg-blue-700 text-white text-center">
+      <section className="py-12 px-4 text-white text-center" style={{ backgroundColor: '#2d4055' }}>
         <h2 className="text-2xl font-bold mb-3">Get a Cleaning Quote Today</h2>
-        <p className="text-white/90 mb-6">Let us create a tailored cleaning solution for your business.</p>
+        <p className="text-white/80 mb-6">Let us create a tailored cleaning solution for your business.</p>
         <Link
           to="/contact"
-          className="bg-white text-blue-700 font-semibold px-8 py-3 rounded hover:bg-blue-50 transition-colors inline-block"
+          className="bg-white font-semibold px-8 py-3 rounded hover:bg-gray-100 transition-colors inline-block"
+          style={{ color: '#5da028' }}
         >
           Contact Us
         </Link>

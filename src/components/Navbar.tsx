@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import logo from '../assets/images/hermau_services_logo.png'
+import logo20 from '../assets/images/20years.png'
 
 const navLinks = [
   { to: '/', label: 'Home' },
@@ -15,9 +16,14 @@ export default function Navbar() {
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        <Link to="/" className="flex items-center">
+      <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between gap-4">
+        <Link to="/" className="flex items-center gap-3">
           <img src={logo} alt="Hermau Services" className="h-14 w-auto" />
+          <img
+            src={logo20}
+            alt="20 Years of Quality Service"
+            className="h-14 w-auto hidden sm:block"
+          />
         </Link>
 
         <nav className="hidden md:flex gap-6 items-center">
@@ -28,7 +34,9 @@ export default function Navbar() {
               end={to === '/'}
               className={({ isActive }) =>
                 `text-sm font-medium transition-colors ${
-                  isActive ? 'text-green-700 border-b-2 border-green-700 pb-0.5' : 'text-gray-700 hover:text-green-700'
+                  isActive
+                    ? 'text-brand-green border-b-2 border-brand-green pb-0.5'
+                    : 'text-brand-dark hover:text-brand-green'
                 }`
               }
             >
@@ -38,7 +46,7 @@ export default function Navbar() {
         </nav>
 
         <button
-          className="md:hidden p-2 rounded text-gray-700 hover:bg-gray-100"
+          className="md:hidden p-2 rounded text-brand-dark hover:bg-gray-100"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -61,7 +69,9 @@ export default function Navbar() {
               end={to === '/'}
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
-                `block py-2 text-sm font-medium ${isActive ? 'text-green-700' : 'text-gray-700 hover:text-green-700'}`
+                `block py-2 text-sm font-medium ${
+                  isActive ? 'text-brand-green' : 'text-brand-dark hover:text-brand-green'
+                }`
               }
             >
               {label}

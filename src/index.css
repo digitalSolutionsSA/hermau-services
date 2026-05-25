@@ -2,6 +2,14 @@
 
 @import "tailwindcss";
 
+@theme {
+  --color-brand-dark: #2d4055;
+  --color-brand-green: #5da028;
+  --color-brand-green-light: #7dc240;
+  --color-brand-green-pale: #f0f7e8;
+  --color-brand-navy-pale: #e8ecf0;
+}
+
 * {
   box-sizing: border-box;
 }

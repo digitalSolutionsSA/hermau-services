@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import gardenSlide from '../assets/images/slides/hermau_services_garden_maintenance_home_slide.jpg'
 import cleaningSlide from '../assets/images/slides/hermau_services_cleaning_services_home_slide.jpg'
+import logo20 from '../assets/images/20years.png'
 
 const slides = [
   {
@@ -33,7 +34,7 @@ export default function HeroSlider() {
   const slide = slides[current]
 
   return (
-    <div className="relative h-[520px] md:h-[620px] overflow-hidden">
+    <div className="relative h-[520px] md:h-[640px] overflow-hidden">
       {slides.map((s, i) => (
         <img
           key={i}
@@ -45,7 +46,16 @@ export default function HeroSlider() {
         />
       ))}
 
-      <div className="absolute inset-0 bg-black/45" />
+      <div className="absolute inset-0 bg-black/50" />
+
+      {/* 20-year badge — top right */}
+      <div className="absolute top-6 right-6 z-20 hidden sm:block">
+        <img
+          src={logo20}
+          alt="20 Years of Quality Service"
+          className="h-32 md:h-44 w-auto drop-shadow-2xl"
+        />
+      </div>
 
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
@@ -56,7 +66,8 @@ export default function HeroSlider() {
         </p>
         <Link
           to={slide.href}
-          className="bg-green-700 hover:bg-green-600 text-white font-semibold px-8 py-3 rounded transition-colors text-base"
+          style={{ backgroundColor: '#5da028' }}
+          className="hover:opacity-90 text-white font-semibold px-8 py-3 rounded transition-opacity text-base"
         >
           {slide.cta}
         </Link>

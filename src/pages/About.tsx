@@ -2,6 +2,7 @@ import PageHeader from '../components/PageHeader'
 import headerBg from '../assets/images/hermau_services_main_background.jpg'
 import teamImg from '../assets/images/hermau_services_team/team.jpg'
 import profileThumb from '../assets/images/hermau_services_company_profile_thumb.jpg'
+import logo20 from '../assets/images/20years.png'
 
 const stats = [
   { value: '450+', label: 'Happy Clients' },
@@ -40,7 +41,7 @@ export default function About() {
               className="w-full md:w-72 rounded-lg shadow-md object-cover flex-shrink-0"
             />
             <div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Who We Are</h2>
+              <h2 className="text-2xl font-bold mb-4" style={{ color: '#2d4055' }}>Who We Are</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Hermau Garden Services is a <strong>Level 4 BBBEE</strong> company that was established in 2006.
                 Which started as a small family business, through hard work, commitment and dedication, soon became
@@ -62,8 +63,8 @@ export default function About() {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-14">
             {stats.map(({ value, label }) => (
-              <div key={label} className="text-center p-5 bg-green-50 rounded-lg border border-green-100">
-                <div className="text-3xl font-bold text-green-700 mb-1">{value}</div>
+              <div key={label} className="text-center p-5 rounded-lg border" style={{ backgroundColor: '#f0f7e8', borderColor: '#c8e6a0' }}>
+                <div className="text-3xl font-bold mb-1" style={{ color: '#5da028' }}>{value}</div>
                 <div className="text-sm text-gray-600">{label}</div>
               </div>
             ))}
@@ -71,8 +72,24 @@ export default function About() {
         </div>
       </section>
 
+      {/* 20-year callout */}
+      <section style={{ backgroundColor: '#2d4055' }} className="py-10 px-4">
+        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+          <img src={logo20} alt="20 Years of Quality Service" className="h-36 w-auto flex-shrink-0 drop-shadow-xl" />
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+              Celebrating 20 Years of Excellence
+            </h2>
+            <p className="text-white/80 leading-relaxed">
+              Two decades of dedication to quality, honesty and reliability — serving the Vaal Triangle
+              with pride and growing stronger every year.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Director */}
-      <section className="py-14 px-4 bg-gray-50">
+      <section className="py-14 px-4 bg-brand-navy-pale">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 items-start">
           <img
             src={teamImg}
@@ -80,7 +97,7 @@ export default function About() {
             className="w-full md:w-80 rounded-lg shadow-md object-cover flex-shrink-0"
           />
           <div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Leadership &amp; Values</h2>
+            <h2 className="text-2xl font-bold mb-4" style={{ color: '#2d4055' }}>Leadership &amp; Values</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
               The Director, Gustav Aucamp, has 28 years' experience in forensics. Quality, honesty and reliability
               is our priority — therefore we ensure that all workers are thoroughly screened before employment to
@@ -90,11 +107,11 @@ export default function About() {
               Our dedicated team is committed to delivering the highest standard of service on every job, ensuring
               that our clients can rely on us completely.
             </p>
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">Clients We Serve</h3>
+            <h3 className="text-lg font-semibold mb-3" style={{ color: '#2d4055' }}>Clients We Serve</h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
               {clientTypes.map((type) => (
                 <li key={type} className="flex items-center gap-2 text-gray-600 text-sm">
-                  <span className="text-green-600">✓</span> {type}
+                  <span style={{ color: '#5da028' }} className="font-bold">✓</span> {type}
                 </li>
               ))}
             </ul>
